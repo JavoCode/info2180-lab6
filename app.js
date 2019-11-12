@@ -1,20 +1,15 @@
-window.onload= function() {
-    var button  = document.getElementById("btn");
-    var search = document.getElementById("srchbar").value;
-    //const fetch = require('node-fetch');
-    
-    button.addEventListener("click", function(){
-        fetch('superheroes.php')
-        .then(response => response.text())
-        .then (data => {
-          //alert(data);  
-         data.forEach(i =>{
-             
-         })
-          
-        })
-        
-        
-    })
-    
-}
+window.onload = () => {
+
+	let searchB = document.getElementById("search-bttn");
+	searchB.onclick= ()=>{
+	    let searchQ = document.querySelector('#search').value;
+		$.get("superheroes.php", 
+		{ 
+		    query: searchQ 
+		}).done(function(response){ 
+		    let res = response; $('#result').html(res); 
+		}).fail(function(){ 
+		    alert('Something just went wrong'); 
+		});
+	};
+};

@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avengers Search</title>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div><h1>Avengers Character Search</h1></div>
+    
     <div>
-        <input type="text" id = "srchbar"/>
+        <div>
+            <h3>Search by Fullname or Alias</h3>
+        </div>
+        <div>
+            <label for="search">Fullname or Alias: </label>
+            <input id="search" type="text" name="search"/>
+            <button id="search-bttn">Search</button>
+        </div>
     </div>
-    <div>
-        <button type = "button" id = "btn">Search</button>
-    </div>
-    <div id = "results">
-    </div>
-    <script src="app.js"></script>
+    
+    <div id="result"></div>
+</body>
 </html>
